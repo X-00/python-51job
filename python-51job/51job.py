@@ -944,7 +944,7 @@ if num>=50:
 	k=int(k)
 else:
 	k=num
-for i in range(1,k):
+for i in range(1,k+1):
 	url=START_URL.format(dic[key],keyword,i)
 	html=requests.get(url,headers=HEADERS).content.decode("gbk")        #返回html页面
 	bs=BeautifulSoup(html,'html.parser').find('div',class_='dw_table').find_all('div',class_='el')#对html页面进行解析
